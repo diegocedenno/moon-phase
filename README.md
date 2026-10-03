@@ -4,7 +4,9 @@
 >
 > La fase de la Luna de hoy o de cualquier fecha, calculada en tu navegador con un algoritmo astronómico de verdad, con calendario mensual y las próximas lunas llena y nueva.
 
-![moon-phase preview](docs/preview.png)
+**[Live demo · Demo en vivo →](https://diegocedenno.github.io/moon-phase/)**
+
+[![moon-phase preview](docs/preview.png)](https://diegocedenno.github.io/moon-phase/)
 
 **[English](#english)** · **[Español](#español)**
 

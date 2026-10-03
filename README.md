@@ -21,6 +21,7 @@
 - The calendar draws every day's Moon, rings the days of new moon, quarters and full moon, and lists their exact local times.
 - Next full moon and next new moon, with local date, time and a countdown in days.
 - Northern / southern hemisphere view (the Moon is drawn upside down in the south). The choice is remembered (`localStorage`).
+- A switch in the header flips between dark and light mode: the same sky redrawn as a star chart on paper, with the Moon as an almanac diagram (ivory for the lit part, ink grey for the shadow). The choice is remembered and shared across the Plutón series.
 
 ### What makes it technically interesting
 
@@ -73,6 +74,7 @@ node -e "global.window={}; require('./js/astro.js'); console.log(new Date(window
 - El calendario dibuja la Luna de cada día, marca con un anillo los días de luna nueva, cuartos y luna llena, y lista sus horas locales exactas.
 - Próxima luna llena y próxima luna nueva, con fecha y hora local y una cuenta atrás en días.
 - Vista desde el hemisferio norte o el sur (en el sur la Luna se dibuja invertida). La elección se recuerda (`localStorage`).
+- Un interruptor en la cabecera alterna entre modo oscuro y claro: el mismo cielo redibujado como carta estelar sobre papel, con la Luna como diagrama de almanaque (marfil para la parte iluminada, gris tinta para la sombra). La elección se recuerda y se comparte entre los proyectos de la serie Plutón.
 
 ### Qué lo hace interesante técnicamente
 

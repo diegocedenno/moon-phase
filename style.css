@@ -9,6 +9,54 @@
   gap: var(--s-6);
 }
 
+/* Colores de la Luna. En oscuro la parte iluminada brilla y la sombra se funde
+   con el cielo; sobre papel se dibuja como en un almanaque: la parte iluminada
+   en un marfil cálido, la sombra en gris tinta y un contorno de tinta. */
+:root {
+  --moon-lit-0: #f4f6f8;
+  --moon-lit-1: #dfe4ea;
+  --moon-lit-2: #b4bcc6;
+  --moon-mini: #d5dbe1;
+  --moon-sea: #667079;
+  --moon-glow: var(--text);
+  --moon-shade: var(--bg);
+  --moon-rim: var(--border-strong);
+  --brand-lit: var(--text);
+  --probe-window: var(--surface);
+}
+
+:root[data-theme="light"] {
+  --moon-lit-0: #fffdf6;
+  --moon-lit-1: #f8eed6;
+  --moon-lit-2: #e6d5b0;
+  --moon-mini: #fbf0d2;
+  --moon-sea: #8a7758;
+  --moon-glow: #d6b97f;
+  --moon-shade: #59626d;
+  --moon-rim: var(--rocket-line);
+  --brand-lit: var(--moon-mini);
+  --probe-window: var(--rocket-line);
+}
+
+/* ---------- marca ---------- */
+
+.brand-lit {
+  fill: var(--brand-lit);
+}
+
+.brand-shade {
+  fill: var(--moon-shade);
+  opacity: 0.9;
+}
+
+.brand-rim {
+  stroke: var(--moon-rim);
+}
+
+.brand-star {
+  fill: var(--accent);
+}
+
 /* ---------- escena ---------- */
 
 .stage {
@@ -36,15 +84,51 @@
   transform: rotate(180deg);
 }
 
+.moon-lit-0 {
+  stop-color: var(--moon-lit-0);
+}
+
+.moon-lit-1 {
+  stop-color: var(--moon-lit-1);
+}
+
+.moon-lit-2 {
+  stop-color: var(--moon-lit-2);
+}
+
+.moon-glow {
+  stop-color: var(--moon-glow);
+}
+
+.moon-seas {
+  fill: var(--moon-sea);
+  opacity: 0.36;
+}
+
+.moon-rays {
+  stroke: var(--rocket);
+  opacity: 0.26;
+}
+
+.moon-craters {
+  fill: var(--rocket);
+  opacity: 0.6;
+}
+
+.moon-shadow {
+  fill: var(--moon-shade);
+  opacity: 0.9;
+}
+
 .moon-limb {
   fill: none;
-  stroke: var(--border-strong);
+  stroke: var(--moon-rim);
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
 }
 
 .moon-penumbra {
-  fill: var(--bg);
+  fill: var(--moon-shade);
   opacity: 0.085;
 }
 
@@ -52,20 +136,47 @@
   fill: var(--bg);
 }
 
+/* Cohete del dial: en modo claro lo sostiene un contorno de tinta, pintado por
+   debajo del relleno para que solo asome por fuera. */
+.probe-body {
+  fill: var(--rocket);
+  stroke: var(--rocket-line);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  vector-effect: non-scaling-stroke;
+}
+
+.probe-side {
+  fill: #cfd6dd;
+}
+
+.probe-fin {
+  fill: var(--accent);
+}
+
+.probe-flame {
+  fill: var(--alert);
+}
+
+.probe-window {
+  fill: var(--probe-window);
+}
+
 /* Lunas pequeñas: dial, calendario y tarjetas */
 
 .mini-disc {
-  fill: #d5dbe1;
+  fill: var(--moon-mini);
 }
 
 .mini-shadow {
-  fill: var(--bg);
+  fill: var(--moon-shade);
   opacity: 0.9;
 }
 
 .mini-rim {
   fill: none;
-  stroke: var(--border-strong);
+  stroke: var(--moon-rim);
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
 }
